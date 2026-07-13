@@ -1,1 +1,0 @@
-# neyuky.github.io
