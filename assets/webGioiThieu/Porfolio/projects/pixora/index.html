@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tải Pixora cho Windows – công cụ chuyển đổi tệp nhanh, đơn giản, hỗ trợ nhiều định dạng và xử lý hoàn toàn trên máy tính.">
+    <meta property="og:title" content="Pixora – Chuyển đổi tệp nhanh chóng và riêng tư">
+    <meta property="og:description" content="Tải Pixora cho Windows – công cụ chuyển đổi tệp nhanh, đơn giản, hỗ trợ nhiều định dạng và xử lý hoàn toàn trên máy tính.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/app-preview.png">
+    <meta name="theme-color" content="#0B1020">
+    <title>Pixora – Chuyển đổi tệp nhanh chóng và riêng tư</title>
+    <link rel="icon" type="image/png" href="assets/pixora-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+        <symbol id="icon-download" viewBox="0 0 24 24">
+            <path d="M12 3v11"></path>
+            <path d="m7 10 5 5 5-5"></path>
+            <path d="M5 20h14"></path>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+            <path d="M5 12h14"></path>
+            <path d="m13 6 6 6-6 6"></path>
+        </symbol>
+        <symbol id="icon-arrow-up" viewBox="0 0 24 24">
+            <path d="M12 20V4"></path>
+            <path d="m6 10 6-6 6 6"></path>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"></path>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3 5 6v6c0 4.2 2.8 7.4 7 9 4.2-1.6 7-4.8 7-9V6l-7-3Z"></path>
+            <path d="m9.5 12 1.8 1.8 3.7-4"></path>
+        </symbol>
+        <symbol id="icon-zap" viewBox="0 0 24 24">
+            <path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"></path>
+        </symbol>
+        <symbol id="icon-files" viewBox="0 0 24 24">
+            <path d="M8 7V5a2 2 0 0 1 2-2h5l4 4v10a2 2 0 0 1-2 2h-1"></path>
+            <path d="M6 7h6l4 4v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"></path>
+            <path d="M12 7v4h4"></path>
+        </symbol>
+        <symbol id="icon-pointer" viewBox="0 0 24 24">
+            <path d="m5 3 14 9-7 2-3 7L5 3Z"></path>
+            <path d="m13 14 5 5"></path>
+        </symbol>
+        <symbol id="icon-layers" viewBox="0 0 24 24">
+            <path d="m12 3 9 5-9 5-9-5 9-5Z"></path>
+            <path d="m3 13 9 5 9-5"></path>
+            <path d="m3 18 9 5 9-5"></path>
+        </symbol>
+        <symbol id="icon-wifi-off" viewBox="0 0 24 24">
+            <path d="m2 2 20 20"></path>
+            <path d="M8.5 16.5a5 5 0 0 1 7 0"></path>
+            <path d="M5 13a10 10 0 0 1 7-3c1.4 0 2.7.3 3.9.8"></path>
+            <path d="M2 9a15 15 0 0 1 12.6-1.8"></path>
+            <path d="M12 20h.01"></path>
+        </symbol>
+        <symbol id="icon-smile" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M8 14s1.4 2 4 2 4-2 4-2"></path>
+            <path d="M9 9h.01"></path>
+            <path d="M15 9h.01"></path>
+        </symbol>
+        <symbol id="icon-lock" viewBox="0 0 24 24">
+            <rect x="5" y="11" width="14" height="9" rx="2"></rect>
+            <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+        </symbol>
+        <symbol id="icon-upload-off" viewBox="0 0 24 24">
+            <path d="m2 2 20 20"></path>
+            <path d="M12 16V9"></path>
+            <path d="m8 13 4-4 2 2"></path>
+            <path d="M20 16.6A5 5 0 0 0 15 9h-1.3A7 7 0 0 0 3.8 13"></path>
+            <path d="M16 20H8a5 5 0 0 1-4.7-3.3"></path>
+        </symbol>
+        <symbol id="icon-history-off" viewBox="0 0 24 24">
+            <path d="m2 2 20 20"></path>
+            <path d="M3 12a9 9 0 0 1 13.8-7.6"></path>
+            <path d="M21 12a9 9 0 0 1-13.4 7.8"></path>
+            <path d="M3 5v5h5"></path>
+            <path d="M12 7v5l2 2"></path>
+        </symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="8" r="4"></circle>
+        </symbol>
+    </svg>
+
+    <header class="site-header" id="site-header">
+        <nav class="nav-wrap" aria-label="Điều hướng Pixora">
+            <a class="brand" href="#home" aria-label="Về đầu trang Pixora">
+                <img src="assets/pixora-logo.png" alt="" width="40" height="40">
+                <span>Pixora</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Mở menu" aria-controls="primary-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="primary-menu">
+                <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                <li><a href="#features" class="nav-link">Tính năng</a></li>
+                <li><a href="#screenshots" class="nav-link">Hình ảnh</a></li>
+                <li><a href="#install" class="nav-link">Cài đặt</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <a href="https://drive.google.com/uc?export=download&id=1yAqbo9ELSAbxLY5IuzHQ7_pZMTKrOenX" target="_blank" rel="noopener noreferrer" class="download-btn header-cta" aria-label="Tải Pixora cho Windows">
+                <svg class="icon"><use href="#icon-download"></use></svg>
+                Tải Pixora
+            </a>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="badge">
+                        <svg class="icon"><use href="#icon-check"></use></svg>
+                        Dành cho Windows
+                    </span>
+                    <h1>Pixora</h1>
+                    <p class="hero-title">Chuyển đổi tệp nhanh chóng, đơn giản và riêng tư.</p>
+                    <p class="hero-description">
+                        Pixora giúp bạn chuyển đổi nhiều định dạng hình ảnh và tài liệu ngay trên máy tính.
+                        Giao diện thân thiện, tốc độ nhanh và không cần tải dữ liệu lên máy chủ.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://drive.google.com/uc?export=download&id=1yAqbo9ELSAbxLY5IuzHQ7_pZMTKrOenX" target="_blank" rel="noopener noreferrer" class="download-btn primary-download">
+                            <svg class="icon"><use href="#icon-download"></use></svg>
+                            Tải Pixora
+                        </a>
+                        <a href="#features" class="secondary-btn">
+                            Xem tính năng
+                            <svg class="icon"><use href="#icon-arrow-right"></use></svg>
+                        </a>
+                    </div>
+                    <p class="release-note">
+                        Phiên bản mới nhất: <strong>v1.0.0</strong><br>
+                        Windows 10/11 • 64-bit
+                    </p>
+                </div>
+
+                <figure class="hero-mockup reveal">
+                    <div class="mockup-shell" aria-hidden="true">
+                        <img src="assets/app-preview.png" alt="">
+                    </div>
+                    <figcaption class="sr-only">Mockup giao diện ứng dụng Pixora trên Windows.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="trust-bar" aria-label="Lý do nên chọn Pixora">
+            <div class="container trust-grid reveal">
+                <div class="trust-item">
+                    <svg class="icon"><use href="#icon-check"></use></svg>
+                    <span>Miễn phí</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="icon"><use href="#icon-shield"></use></svg>
+                    <span>Không quảng cáo</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="icon"><use href="#icon-lock"></use></svg>
+                    <span>Không tải tệp lên máy chủ</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="icon"><use href="#icon-zap"></use></svg>
+                    <span>Cài đặt nhanh</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Tính năng</span>
+                    <h2>Mọi thứ bạn cần trong một công cụ chuyển đổi</h2>
+                    <p>Pixora tập trung vào các thao tác thường dùng nhất để bạn chuyển đổi tệp nhanh, rõ ràng và ít bước thừa.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><svg class="icon"><use href="#icon-zap"></use></svg></span>
+                        <h3>Chuyển đổi nhanh</h3>
+                        <p>Xử lý tệp trực tiếp trên máy tính, giảm thời gian chờ và thao tác lặp lại.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><svg class="icon"><use href="#icon-files"></use></svg></span>
+                        <h3>Hỗ trợ nhiều định dạng</h3>
+                        <p>Linh hoạt với các định dạng hình ảnh và tài liệu phổ biến trong học tập, làm việc.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><svg class="icon"><use href="#icon-pointer"></use></svg></span>
+                        <h3>Kéo và thả tệp</h3>
+                        <p>Thêm tệp bằng thao tác kéo thả quen thuộc, phù hợp cả khi xử lý nhiều tệp.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><svg class="icon"><use href="#icon-layers"></use></svg></span>
+                        <h3>Chuyển đổi hàng loạt</h3>
+                        <p>Đưa nhiều tệp vào hàng chờ và theo dõi tiến trình trong một giao diện gọn gàng.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><svg class="icon"><use href="#icon-wifi-off"></use></svg></span>
+                        <h3>Hoạt động ngoại tuyến</h3>
+                        <p>Vẫn chuyển đổi được khi không có mạng, chỉ cần kết nối khi tải hoặc cập nhật ứng dụng.</p>
+                    </article>
+                    <article class="feature-card reveal">
+                        <span class="feature-icon"><svg class="icon"><use href="#icon-smile"></use></svg></span>
+                        <h3>Giao diện thân thiện</h3>
+                        <p>Bố cục rõ ràng, nút bấm dễ hiểu và thông tin kết quả hiển thị ngay khi cần.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section steps-section" id="how-to">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="eyebrow">Cách sử dụng</span>
+                    <h2>Chuyển đổi tệp chỉ trong 3 bước</h2>
+                </div>
+
+                <ol class="steps-list">
+                    <li class="step-card reveal">
+                        <span class="step-number">1</span>
+                        <h3>Chọn hoặc kéo thả tệp</h3>
+                        <p>Thêm một hoặc nhiều tệp vào Pixora từ máy tính của bạn.</p>
+                    </li>
+                    <li class="step-card reveal">
+                        <span class="step-number">2</span>
+                        <h3>Chọn định dạng đầu ra</h3>
+                        <p>Chọn định dạng mong muốn và kiểm tra lại tên tệp trước khi xử lý.</p>
+                    </li>
+                    <li class="step-card reveal">
+                        <span class="step-number">3</span>
+                        <h3>Nhấn chuyển đổi và lưu kết quả</h3>
+                        <p>Pixora xử lý nhanh và lưu kết quả về thư mục bạn chọn.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="screenshots">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Hình ảnh</span>
+                    <h2>Giao diện đơn giản, dễ làm quen</h2>
+                    <p>Ba khung xem trước dưới đây là placeholder để bạn thay bằng ảnh chụp thật của ứng dụng khi đã sẵn sàng.</p>
+                </div>
+
+                <div class="screenshot-grid">
+                    <button class="screenshot-card reveal" type="button" data-modal-image="assets/screenshot-1.png" data-modal-alt="Ảnh giao diện chuyển đổi nhanh của Pixora" data-modal-title="Không gian chuyển đổi nhanh">
+                        <img src="assets/screenshot-1.png" alt="Ảnh giao diện chuyển đổi nhanh của Pixora">
+                        <span>Không gian chuyển đổi nhanh</span>
+                    </button>
+                    <button class="screenshot-card reveal" type="button" data-modal-image="assets/screenshot-2.png" data-modal-alt="Ảnh hàng chờ chuyển đổi hàng loạt của Pixora" data-modal-title="Hàng chờ xử lý hàng loạt">
+                        <img src="assets/screenshot-2.png" alt="Ảnh hàng chờ chuyển đổi hàng loạt của Pixora">
+                        <span>Hàng chờ xử lý hàng loạt</span>
+                    </button>
+                    <button class="screenshot-card reveal" type="button" data-modal-image="assets/screenshot-3.png" data-modal-alt="Ảnh giao diện quyền riêng tư ngoại tuyến của Pixora" data-modal-title="Quyền riêng tư ngoại tuyến">
+                        <img src="assets/screenshot-3.png" alt="Ảnh giao diện quyền riêng tư ngoại tuyến của Pixora">
+                        <span>Quyền riêng tư ngoại tuyến</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section privacy-section" id="privacy">
+            <div class="container privacy-panel reveal">
+                <div>
+                    <span class="eyebrow">Quyền riêng tư</span>
+                    <h2>Tệp của bạn luôn thuộc về bạn</h2>
+                    <p>
+                        Pixora xử lý tệp trực tiếp trên máy tính. Dữ liệu của bạn không được tải lên máy chủ bên ngoài,
+                        giúp quá trình chuyển đổi nhanh hơn và bảo vệ quyền riêng tư tốt hơn.
+                    </p>
+                </div>
+                <ul class="privacy-list" aria-label="Cam kết quyền riêng tư">
+                    <li>
+                        <svg class="icon"><use href="#icon-upload-off"></use></svg>
+                        Không upload dữ liệu
+                    </li>
+                    <li>
+                        <svg class="icon"><use href="#icon-history-off"></use></svg>
+                        Không lưu lịch sử tệp
+                    </li>
+                    <li>
+                        <svg class="icon"><use href="#icon-user"></use></svg>
+                        Không yêu cầu tài khoản
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="install">
+            <div class="container install-grid">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Cài đặt</span>
+                    <h2>Yêu cầu hệ thống nhẹ, phù hợp máy Windows phổ biến</h2>
+                    <p>Pixora được thiết kế để cài nhanh và dùng ổn định cho nhu cầu chuyển đổi tệp hằng ngày.</p>
+                </div>
+
+                <article class="system-card reveal">
+                    <h3>Yêu cầu hệ thống</h3>
+                    <dl class="system-list">
+                        <div>
+                            <dt>Hệ điều hành</dt>
+                            <dd>Windows 10 hoặc Windows 11</dd>
+                        </div>
+                        <div>
+                            <dt>Kiến trúc</dt>
+                            <dd>64-bit</dd>
+                        </div>
+                        <div>
+                            <dt>RAM</dt>
+                            <dd>Tối thiểu 4 GB</dd>
+                        </div>
+                        <div>
+                            <dt>Dung lượng trống</dt>
+                            <dd>Khoảng 200 MB</dd>
+                        </div>
+                        <div>
+                            <dt>Kết nối mạng</dt>
+                            <dd>Chỉ cần khi tải hoặc cập nhật ứng dụng</dd>
+                        </div>
+                    </dl>
+                </article>
+            </div>
+        </section>
+
+        <section class="section cta-section" id="download">
+            <div class="container cta-panel reveal">
+                <span class="eyebrow">Tải ứng dụng</span>
+                <h2>Sẵn sàng trải nghiệm Pixora?</h2>
+                <p>Tải Pixora và bắt đầu chuyển đổi tệp nhanh chóng ngay hôm nay.</p>
+                <a href="https://drive.google.com/uc?export=download&id=1yAqbo9ELSAbxLY5IuzHQ7_pZMTKrOenX" target="_blank" rel="noopener noreferrer" class="download-btn cta-download">
+                    <svg class="icon"><use href="#icon-download"></use></svg>
+                    Tải Pixora cho Windows
+                </a>
+                <p class="release-note">Phiên bản v1.0.0<br>Windows 10/11 64-bit</p>
+            </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <div class="section-heading centered reveal">
+                    <span class="eyebrow">FAQ</span>
+                    <h2>Câu hỏi thường gặp</h2>
+                </div>
+
+                <div class="faq-list reveal" data-accordion>
+                    <article class="faq-item is-open">
+                        <h3>
+                            <button class="faq-question" type="button" aria-expanded="true" aria-controls="faq-answer-1" id="faq-question-1">
+                                Pixora có miễn phí không?
+                                <span class="faq-toggle-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+                            <div>
+                                <p>Có. Trang này giới thiệu Pixora như một công cụ miễn phí cho nhu cầu chuyển đổi tệp cá nhân và học tập.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
+                                Pixora hỗ trợ những định dạng nào?
+                                <span class="faq-toggle-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2">
+                            <div>
+                                <p>Pixora hướng đến các định dạng hình ảnh và tài liệu phổ biến. Bạn có thể cập nhật danh sách định dạng chính xác theo phiên bản phát hành thực tế.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
+                                Pixora có tải tệp lên Internet không?
+                                <span class="faq-toggle-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3">
+                            <div>
+                                <p>Không. Pixora xử lý tệp trực tiếp trên máy tính, không tải dữ liệu của bạn lên máy chủ bên ngoài trong quá trình chuyển đổi.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
+                                Pixora có chạy trên Windows 7 không?
+                                <span class="faq-toggle-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4">
+                            <div>
+                                <p>Không khuyến nghị. Trang này công bố yêu cầu hệ thống là Windows 10 hoặc Windows 11, kiến trúc 64-bit.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-5" id="faq-question-5">
+                                Tại sao Windows cảnh báo khi cài đặt?
+                                <span class="faq-toggle-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5">
+                            <div>
+                                <p>Windows có thể hiển thị cảnh báo với ứng dụng mới chưa có chứng thư ký số. Chỉ tải Pixora từ trang chính thức hoặc GitHub Releases chính thức.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq-item">
+                        <h3>
+                            <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-answer-6" id="faq-question-6">
+                                Làm sao cập nhật Pixora?
+                                <span class="faq-toggle-icon" aria-hidden="true"></span>
+                            </button>
+                        </h3>
+                        <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6">
+                            <div>
+                                <p>Khi có bản mới, hãy tải lại bộ cài từ nguồn chính thức. Nếu sau này Pixora có trình cập nhật riêng, nội dung này có thể được cập nhật theo phiên bản đó.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="#home" aria-label="Về đầu trang Pixora">
+                    <img src="assets/pixora-logo.png" alt="" width="36" height="36">
+                    <span>Pixora</span>
+                </a>
+                <p>Công cụ chuyển đổi tệp nhanh, gọn và tôn trọng quyền riêng tư cho Windows.</p>
+            </div>
+            <nav class="footer-links" aria-label="Liên kết cuối trang">
+                <a href="#home">Trang chủ</a>
+                <a href="#">GitHub</a>
+                <a href="#">Báo lỗi</a>
+                <a href="#">Chính sách riêng tư</a>
+            </nav>
+        </div>
+        <p class="copyright">© 2026 Neyuky. All rights reserved.</p>
+    </footer>
+
+    <div class="image-modal" id="screenshot-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-panel">
+            <button class="modal-close" type="button" aria-label="Đóng ảnh" data-modal-close>×</button>
+            <img id="modal-image" src="assets/screenshot-1.png" alt="">
+            <p id="modal-title"></p>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Quay lại đầu trang">
+        <svg class="icon"><use href="#icon-arrow-up"></use></svg>
+    </button>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
