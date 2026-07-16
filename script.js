@@ -26,18 +26,18 @@ const initAmbientParticles = () => {
     }
 
     const dotColors = [
-        { r: 99, g: 102, b: 241, max: 0.44 },
-        { r: 59, g: 130, b: 246, max: 0.40 },
-        { r: 168, g: 85, b: 247, max: 0.38 },
-        { r: 6, g: 182, b: 212, max: 0.34 },
-        { r: 255, g: 255, b: 255, max: 0.48 }
+        { r: 108, g: 99, b: 255, max: 0.48 },
+        { r: 124, g: 77, b: 255, max: 0.46 },
+        { r: 96, g: 165, b: 250, max: 0.44 },
+        { r: 125, g: 211, b: 252, max: 0.42 },
+        { r: 196, g: 181, b: 253, max: 0.45 }
     ];
     const blobColors = [
-        { r: 99, g: 102, b: 241, max: 0.13 },
-        { r: 59, g: 130, b: 246, max: 0.11 },
-        { r: 168, g: 85, b: 247, max: 0.11 },
-        { r: 6, g: 182, b: 212, max: 0.10 },
-        { r: 255, g: 255, b: 255, max: 0.095 }
+        { r: 108, g: 99, b: 255, max: 0.20 },
+        { r: 124, g: 77, b: 255, max: 0.18 },
+        { r: 96, g: 165, b: 250, max: 0.17 },
+        { r: 125, g: 211, b: 252, max: 0.16 },
+        { r: 196, g: 181, b: 253, max: 0.17 }
     ];
     const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const finePointerQuery = window.matchMedia("(pointer: fine)");
@@ -72,13 +72,13 @@ const initAmbientParticles = () => {
     };
 
     const getParticleProfile = () => {
-        const total = window.innerWidth <= 640 ? 20 : window.innerWidth <= 1024 ? 35 : 64;
+        const total = window.innerWidth <= 640 ? 26 : window.innerWidth <= 1024 ? 46 : 76;
         const adjustedTotal = prefersReducedMotion ? Math.max(4, Math.round(total * 0.2)) : total;
         const sparkleCount = window.innerWidth <= 640 || prefersReducedMotion
             ? 0
             : Math.min(3, Math.max(1, Math.round(adjustedTotal * 0.04)));
-        const minBlobCount = window.innerWidth <= 640 ? 1 : 2;
-        const blobCount = Math.min(adjustedTotal - sparkleCount, Math.max(minBlobCount, Math.round(adjustedTotal * 0.1)));
+        const minBlobCount = window.innerWidth <= 640 ? 2 : 4;
+        const blobCount = Math.min(adjustedTotal - sparkleCount, Math.max(minBlobCount, Math.round(adjustedTotal * 0.12)));
 
         return {
             total: adjustedTotal,
@@ -96,7 +96,7 @@ const initAmbientParticles = () => {
         const layerSeed = Math.random();
         const motionSeed = Math.random();
         const layer = isBlob ? "mist" : layerSeed < 0.42 ? "far" : layerSeed < 0.82 ? "middle" : "near";
-        const opacityScale = isMobile ? 0.8 : 1;
+        const opacityScale = isMobile ? 0.9 : 1;
         const depth = isBlob
             ? randomBetween(0.24, 0.56)
             : layer === "far"
@@ -104,7 +104,7 @@ const initAmbientParticles = () => {
                 : layer === "middle"
                     ? randomBetween(0.46, 0.74)
                     : randomBetween(0.75, 1);
-        const layerAlpha = layer === "far" ? randomBetween(0.50, 0.66) : layer === "middle" ? randomBetween(0.70, 0.86) : randomBetween(0.88, 1);
+        const layerAlpha = layer === "far" ? randomBetween(0.66, 0.80) : layer === "middle" ? randomBetween(0.82, 0.96) : randomBetween(0.96, 1.08);
         const floating = !isBlob && motionSeed < 0.10;
         const drifting = !isBlob && motionSeed >= 0.10 && motionSeed < 0.25;
         const rareLarge = !isBlob && !isSparkle && layer === "near" && Math.random() < 0.18;
@@ -116,49 +116,51 @@ const initAmbientParticles = () => {
         particle.anchorX = getClusteredX();
         particle.y = startAbove ? randomBetween(-height * 0.32, -18) : randomBetween(-20, height + 20);
         particle.size = isBlob
-            ? randomBetween(8, 14)
+            ? randomBetween(8, 12)
             : isSparkle
-                ? randomBetween(3, 5)
+                ? randomBetween(3.5, 5)
                 : layer === "far"
-                    ? randomBetween(2, 3)
+                    ? randomBetween(2, 3.4)
                     : layer === "middle"
-                        ? randomBetween(3.4, 5)
+                        ? randomBetween(4, 6.4)
                         : rareLarge
-                            ? randomBetween(6, 8)
-                            : randomBetween(4, 5.8);
+                            ? randomBetween(8, 12)
+                            : randomBetween(5.6, 8.8);
         particle.speed = isBlob
-            ? randomBetween(0.25, 2.2)
+            ? randomBetween(0.25, 2.5)
             : floating
-                ? randomBetween(0.12, 1.4)
+                ? randomBetween(0.12, 1.6)
                 : layer === "far"
-                    ? randomBetween(1.2, 5.2)
+                    ? randomBetween(1.3, 5.7)
                     : layer === "middle"
-                        ? randomBetween(5.2, 12)
-                        : randomBetween(10, 22);
+                        ? randomBetween(5.8, 13.2)
+                        : randomBetween(11, 24);
         particle.driftAmplitude = isBlob
-            ? randomBetween(1.2, 4.5)
+            ? randomBetween(1.5, 5.2)
             : floating
-                ? randomBetween(0.3, 1.4)
+                ? randomBetween(0.4, 1.8)
                 : drifting
-                    ? randomBetween(4, 7)
-                    : randomBetween(0.5, 2.6);
+                    ? randomBetween(4.8, 8.2)
+                    : randomBetween(0.7, 3.1);
         particle.driftSpeed = isBlob ? randomBetween(0.04, 0.14) : drifting ? randomBetween(0.16, 0.30) : randomBetween(0.04, 0.16);
         particle.phase = randomBetween(0, Math.PI * 2);
         particle.pulse = randomBetween(0, Math.PI * 2);
         particle.angle = randomBetween(0, Math.PI);
         particle.pulseSpeed = isBlob ? randomBetween(0.12, 0.32) : isSparkle ? randomBetween(0.10, 0.24) : randomBetween(0.30, 0.72);
         particle.alphaMin = isBlob
-            ? randomBetween(0.020, 0.038) * opacityScale
+            ? randomBetween(0.035, 0.060) * opacityScale
             : isSparkle
-                ? randomBetween(0.14, 0.18) * opacityScale
-                : randomBetween(0.16, 0.25) * layerAlpha * opacityScale;
+                ? randomBetween(0.18, 0.24) * opacityScale
+                : randomBetween(0.22, 0.32) * layerAlpha * opacityScale;
         particle.alphaMax = isBlob
-            ? color.max * randomBetween(0.60, 0.88) * opacityScale
+            ? color.max * randomBetween(0.72, 1) * opacityScale
             : isSparkle
-                ? randomBetween(0.20, 0.32) * opacityScale
+                ? randomBetween(0.24, 0.38) * opacityScale
                 : color.max * layerAlpha * opacityScale;
-        particle.glow = isBlob || (!isSparkle && Math.random() < 0.32);
-        particle.blur = isBlob ? randomBetween(6, 10) : particle.glow ? randomBetween(4, 8) : randomBetween(0.4, 1.8);
+        particle.alphaMax = Math.min(particle.alphaMax, 0.49);
+        particle.alphaMin = Math.min(particle.alphaMin, particle.alphaMax * 0.76);
+        particle.glow = isBlob || (!isSparkle && Math.random() < 0.42);
+        particle.blur = isBlob ? randomBetween(7, 12) : particle.glow ? randomBetween(5, 10) : randomBetween(1, 2.4);
 
         if (prefersReducedMotion) {
             particle.speed = 0;
@@ -166,6 +168,7 @@ const initAmbientParticles = () => {
             particle.driftSpeed = 0;
             particle.pulseSpeed = 0;
             particle.alphaMax *= 0.78;
+            particle.alphaMin = Math.min(particle.alphaMin, particle.alphaMax * 0.72);
         }
 
         return particle;
@@ -336,7 +339,7 @@ const initAmbientParticles = () => {
             context.beginPath();
             context.fillStyle = rgba(particle.color, alpha);
             context.shadowBlur = particle.blur;
-            context.shadowColor = rgba(particle.color, Math.min(alpha * 0.72, 0.26));
+            context.shadowColor = rgba(particle.color, Math.min(alpha * 0.78, 0.32));
             context.arc(point.x, point.y, particle.size * scale, 0, Math.PI * 2);
             context.fill();
         });
@@ -397,7 +400,7 @@ const initAmbientParticles = () => {
             return;
         }
 
-        const range = width <= 1024 ? 9 : 15;
+        const range = width <= 1024 ? 10 : 16.5;
         pointer.targetX = ((event.clientX / width) - 0.5) * range;
         pointer.targetY = ((event.clientY / height) - 0.5) * range;
     };
